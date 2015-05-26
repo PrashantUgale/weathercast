@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityListViewController">
+            <connections>
+                <outlet property="addCity" destination="fec-tl-65f" id="ySZ-dS-M6v"/>
+                <outlet property="cityNameTextField" destination="pW6-wG-Bkf" id="PPn-oQ-utC"/>
+                <outlet property="cityTableView" destination="SIf-in-piv" id="NLG-dc-TYE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter city name " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pW6-wG-Bkf">
+                    <rect key="frame" x="8" y="72" width="488" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fec-tl-65f">
+                    <rect key="frame" x="504" y="72" width="88" height="30"/>
+                    <color key="backgroundColor" red="0.3013569304" green="0.69376864230000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="88" id="JTo-2t-aR5"/>
+                    </constraints>
+                    <state key="normal" title="Add City">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addCityButton:" destination="-1" eventType="touchUpInside" id="ztV-RM-Rye"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SIf-in-piv">
+                    <rect key="frame" x="0.0" y="110" width="600" height="490"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="DLj-0Y-x4d"/>
+                        <outlet property="delegate" destination="-1" id="gyy-Ul-o2E"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pW6-wG-Bkf" firstAttribute="top" secondItem="fec-tl-65f" secondAttribute="top" id="00X-ky-6ut"/>
+                <constraint firstItem="pW6-wG-Bkf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="0es-To-a3d"/>
+                <constraint firstItem="SIf-in-piv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CRS-iM-qQ5"/>
+                <constraint firstItem="fec-tl-65f" firstAttribute="leading" secondItem="pW6-wG-Bkf" secondAttribute="trailing" constant="8" symbolic="YES" id="SaZ-Xe-kEy"/>
+                <constraint firstAttribute="trailing" secondItem="SIf-in-piv" secondAttribute="trailing" id="YnU-K4-Kds"/>
+                <constraint firstAttribute="bottom" secondItem="SIf-in-piv" secondAttribute="bottom" id="b6I-zm-O5X"/>
+                <constraint firstItem="pW6-wG-Bkf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="hXO-qy-Qkj"/>
+                <constraint firstItem="fec-tl-65f" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="ruR-lb-iSf"/>
+                <constraint firstItem="SIf-in-piv" firstAttribute="top" secondItem="pW6-wG-Bkf" secondAttribute="bottom" constant="8" symbolic="YES" id="zdl-pv-Ghf"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+        </view>
+    </objects>
+</document>
